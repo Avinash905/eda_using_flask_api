@@ -1,0 +1,19 @@
+{% block head %}
+
+<title>EDA</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+{% endblock %}
+
+{% block body %}
+<div class="content">
+    <h1 style="text-align: center">EDA</h1>
+
+    <div class="form">
+        <form action="/eda" method="POST" enctype="multipart/form-data">
+            <input type="file" name="path" id="path">
+
+            <input type="submit" value="Analyse">
+        </form>
+    </div>
+</div>
+{% endblock %}
